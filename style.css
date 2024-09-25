@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin: 50px;
+    font-size: 4.2em;
+}
+
+.cible:hover {
+    cursor: crosshair;
+}
+
+body {
+    background : url(img/fond_bois.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e4e4e4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cible  {
+    width: 50vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+form input {
+    background-color: #f0f0f0;
+    color: #0f0d0d;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.addPlayers {
+    margin: 5px;
+}
+
+.addPlayerBtn {
+    width: auto;
+    margin: 10px auto;
+}
+
+#playerName {
+    width: 70%;
+}
+
+.startButton, .missedBtn {
+    color: #373794;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
+.playersContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+}
+
+.buttonContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.displayPlayers {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    height: auto;
+    margin: 10px;
+    width: 500px;;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 30px;
+    text-align: center;
+    overflow: auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #0f0d0d;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    color: #0f0d0d;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.1em;
+    width: auto;
+}
+
+use:hover, .circleCenter:hover {
+    fill: #ffd500;
+}
+
+.current-player {
+    color: #ffd500;
+}
+
+.displayContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0f0f;
+    border:5px solid #f0f0f0;
+    border-radius: 10px;
+}
+
+
+
+#startButton, #missedBtn {
+    color: #0f0d0d;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2em;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+span.infoGame {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.toggleSound {
+    position: absolute;
+    bottom : 5px;
+    left : 5px;
+    color: #f0f0f04a;
+}
+
+.on {
+    color: #f0f0f0;
+}
+
+.selectedSound {
+    color: #f0f0f0;
+}
+
+
+@media screen and (max-width:1200px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cible {
+        width: 60vh;
+    }
+}

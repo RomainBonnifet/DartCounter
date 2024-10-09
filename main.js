@@ -261,6 +261,23 @@ function startGame(){
   
 }
 
+missedShotBtn()
+function missedShotBtn() {
+  let missedShotBtn = document.getElementById("missedBtn");
+  if (missedShotBtn) {
+    missedShotBtn.addEventListener("click", () => {
+      // Décrémente le nombre de fléchettes restantes du current player
+      playersArray[currentPlayerIndex].volley--;
+      // Ajoute la valeur à l'array saveVolleyValues
+      saveVolleyValues.push(0);
+      updateInfoGame()
+      if (saveVolleyValues.length === 3) {
+        validationVolley()
+      }
+    });
+  }
+}
+
 function pushCurrentPlayerVolley() {
   targetElements.forEach((element, index) => {
     element.addEventListener('click', () => {
@@ -285,7 +302,7 @@ function pushCurrentPlayerVolley() {
 }
 
 function handleScores(volleyArray) {
-  // applique la logique de décrémentation du code pour le current player
+  // applique la logique de décrémentation du score pour le current player
   if (playersArray[currentPlayerIndex].currentPlayer) {
     playersArray[currentPlayerIndex].lastScores = [...volleyArray]
     let volleySum = sumVolleyArray(volleyArray)
@@ -390,5 +407,4 @@ function endGame(){
   alert(playersArray[currentPlayerIndex].name + ' a gagné')
 }
 
-// Todo :
-// Trouver un designer
+
